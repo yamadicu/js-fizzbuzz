@@ -6,20 +6,22 @@
 
 // BONUS 2: Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
 
-/* creare un for con dentro un if e un else if */
+
+const div = document.querySelector("div.contenuto");
 
 for ( let i = 1; i <= 100; i++ ){
-    
+
     if ( i % 5 == 0 && i % 3 == 0){
-        console.log('FrizzBuzz');
+        div.innerHTML +=  ` <div class = "list-group-item p-3 m-2 bg-dark text-light" >FrizzBuzz</div> `
     }
     else if ( i % 3 == 0 ){
-        console.log('Frizz');
+        div.innerHTML +=  ` <div class = "list-group-item p-3 m-2 bg-warning" >Frizz</div> `
     }
     else if ( i % 5 == 0 ){
-        console.log('Buzz');
+        div.innerHTML +=  ` <div class = "list-group-item p-3 m-2 bg-primary" >Buzz</div> `
     }
     else{
-        console.log(i);
+        div.innerHTML +=  ` <div class = "list-group-item p-3 m-2 bg-success">${i}</div> ` 
     }
+
 }
